@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+	  *{
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+	  }
+	  html,body{
+		  font-size: 16px;
+		  width: 100%;
+		  height: 100%;
+		  
+	  }
+	  .container{
+		  height: 100%;
+	  }
+	  .row1{
+		  height: 10%;
+		  align-items: flex-end;
+	  }
+	  .row2{
+		  height: 90%;
+		  justify-content: center;
+		  align-content: center;
+		
+	  }
+	  .icons{
+		  width: 100%;
+		  height:30%;
+		  
+	  }
+	  .icons img{
+		  width: auto;
+		  
+	  }
+	  
+	  .icons img:nth-child(2){
+		  margin-left: 1rem;
+		  margin-right: 1rem;
+	  }
+	  .heading{
+		  margin-left: 0px!important;
+		  line-height: 2.2!important;
+		  color: #707070;
+		  font-size: 3.5rem;
+		
+	  }
+	  .icon:hover{
+		  cursor: pointer;
+	  }
+	  .list{
+		  list-style-type: none;
+		  color: #707070;
+		  font-size: x-large;
+	  }
+	  .paragraph{
+		  color: #707070;
+		  font-size: x-large;
+	  }
+	  #photo{
+		 max-height:300px;
+		  min-height: 100px;
+	  }
+@media only screen and (max-width: 992px) {
+		  html{
+			  font-size: 14px;
+		  }
+		  .heading{
+			  line-height: normal!important;
+		  }
+
+	  }
+
+	  
+	  @media(max-width: 768px) {
+
+		  	.container{
+			padding: 2rem;
+			height: auto;
+	}
+
+		  .icons{
+			  height: 2rem;
+			  margin-bottom: 1rem;
+		  }
+		  #first{
+			  order: 2;
+		  }
+		  #second{
+			  order: 1;
+			  
+		  }
+	  }
+  </style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row row1">
+				<div class="icons">
+					<img id="icon_user" src="assets/icons/user.svg" alt="user.svg" height="100%" width="100%" class="icon">
+					<img id="icon_facebook" src="assets/icons/facebook.svg" alt="facebook.svg" height="100%" width="100%"
+					class="icon">
+					<img id="icon_github" src="assets/icons/github.svg" alt="github.svg" height="100%" width="100%"
+					class="icon">
+				</div>
+			</div>
+			<div class="row row2">
+				<div class="col-lg-7 col-md-7 col-sm-12 order-xs-2" id="first">
+					<h1 class="heading">Shristy Shakya</h1>
+					<p class="paragraph">Hello, my name is Shristy Shakya.I am a Front-end as well as
+					an Android developer
+					</p>
+					<ul class="list">
+						<li>Front-end</li>
+						<li>Android Developer</li>
+						<li>Familiar with git</li>
+						<li>Familier with Angular</li>
+					</ul>
+				</div>
+				<div id="second" class="col-lg-5  col-md-5 col-sm-12 order-xs-1 align-self-center">
+					<embed src="image.svg"
+					id="photo" alt="image.svg" height="100%" width="100%">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
