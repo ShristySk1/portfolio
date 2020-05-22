@@ -25,7 +25,7 @@
 	  }
 	  .row1{
 		  height: 10%;
-		  align-items: flex-end;
+		 
 	  }
 	  .row2{
 		  height: 90%;
@@ -60,19 +60,21 @@
 	  }
 	  .icon:hover{
 		  cursor: pointer;
-	  }
+        filter: brightness(0.5);
+      }
 	  .list{
 		  list-style-type: none;
 		  color: #707070;
-		  font-size: x-large;
+		  font-size: 2rem;
 	  }
 	  .paragraph{
 		  color: #707070;
-		  font-size: x-large;
+		  font-size: 1.5rem;
 	  }
 	  #photo{
 		 max-height:300px;
 		  min-height: 50px;
+		  object-fit: scale-down;
 		  
 	  }
 @media only screen and (max-width: 992px) {
@@ -84,22 +86,32 @@
 		  }
 
 	  }
+@media only screen and (min-width: 768px) {
+	.row1{
+		padding-left: 2rem;
+		align-items: flex-end;
+	}
+
+	  }
 
 	  
 	  @media(max-width: 768px) {
+		   html{
+			  font-size: 10px;
+		  }
 		  #photo{
 			  padding: 2rem;
 		  }
 		  	.container{
-			height: auto;
+			height: 100%;
 			
 			
 	}
 
 		  .icons{
-			  height: 2rem;
-			  margin-bottom: 1rem;
-			  margin: 2rem;
+			  height: 100%;
+			  padding: 2rem;
+			  line-height: 100%;
 		  }
 		  #first{
 			  order: 2;
@@ -118,15 +130,17 @@
 			<div class="row row1">
 				<div class="icons">
 				<a href="">
-					<img id="icon_user" src="assets/icons/user.svg" alt="user.svg" height="100%" width="100%" class="icon">
+					<img id="icon_user" src="assets/icons/user.svg" alt="user.svg" height="100%" width="100%" 
+					class="icon">
 						
 				</a>
 					<a href="https://www.facebook.com/SrisTae">
-					<img id="icon_facebook" src="assets/icons/facebook.svg" alt="facebook.svg" height="100%" width="100%"
+					<img id="icon_facebook" src="assets/icons/facebook.svg" alt="facebook.svg" height="100%" width="100%" 
+					data-toggle="tooltip" data-placement="bottom" title="https://www.facebook.com/SrisTae" 
 					class="icon">
 					</a>
 					<a href="https://www.linkedin.com/in/shristy-shakya-286b00167">
-					<img id="icon_github" src="assets/icons/github.svg" alt="github.svg" height="100%" width="100%"
+					<img id="icon_github" src="assets/icons/github.svg" alt="github.svg" height="100%" width="100%" data-toggle="tooltip" data-placement="bottom" title="https://www.linkedin.com/in/shristy-shakya-286b00167" 
 					class="icon"></a>
 				</div>
 			</div>
@@ -145,9 +159,13 @@
 				</div>
 				<div id="second" class="col-lg-5  col-md-5 col-sm-12 order-xs-1 align-self-center text-center">
 					<img src="img/photo.png"
-					id="photo" alt="image.svg" height="100%">
+					id="photo" alt="image.svg"  width="100%" height="auto">
 				</div>
 			</div>
 		</div>
 	</body>
+	<script>
+	$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>
 </html>
