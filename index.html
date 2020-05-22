@@ -91,6 +91,33 @@
 	         object-fit: scale-down;
 	         
 	     }
+		.skills{
+			height:80%;
+		}
+		
+		.sub-heading{
+			text-align: center;
+			color: gray;
+		}
+		.img-container{
+			padding: 2rem;
+			display: grid;
+			grid-template-columns:repeat(4,1fr);grid-column-gap: 2rem;
+			grid-template-rows: 100px 100px;
+			height: 90%;
+justify-content: center;
+		justify-items:center;
+		}
+		.img-container img{
+			padding: 1.5rem;		}
+		.grid-item5{
+			grid-column-start: 2;
+			grid-column-end: 3;
+		}
+		.grid-item6{
+grid-column-start: 3;
+			grid-column-end: 4;	
+		}
 	@media only screen and (max-width: 992px) {
 	         html{
 	             font-size: 14px;
@@ -134,11 +161,16 @@
 	           
 	           
 	   }
-
+			 .img-container{
+				 grid-template-rows: 50px 50px;
+			 }
+			  .img-container img{
+				  padding: 1rem;
+			 }
 	         .icons{
-	             height: 85%;
+	             height: 100%;
 	             padding: 2rem;
-	             line-height: 85%;
+	             line-height: 100%;
 	         }
 	         #first{
 	             order: 2;
@@ -171,6 +203,26 @@
 				</ul>
 			</div>
 			<div class="col-lg-5 col-md-5 col-sm-12 order-xs-1 align-self-center text-center" id="second"><img alt="image.svg" height="100%" id="photo" src="img/photo.png" width="100%"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="skills">
+			<h1 class="sub-heading">Skills</h1>
+			<div class="img-container">
+				<img src="assets/icons/java.svg" alt="java.svg"
+				height="100%" width="100%">
+				<img src="assets/icons/kotlin.svg" alt="kotlin.svg" height="100%" width="100%">
+				<img src="assets/icons/photoshop.svg" alt="" height="100%" width="100%">
+				<img src="assets/icons/illustrator.svg" alt=""
+				height="100%" width="100%">
+				<img src="assets/icons/xd.svg" alt=""
+				height="100%" 
+				class="grid-item5"
+				width="100%">
+				<img src="assets/icons/git.svg" alt="" height="100%" 
+				class="grid-item6"
+				width="100%">
+			</div>
 		</div>
 	</div>
 	<script>
