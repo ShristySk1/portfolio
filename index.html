@@ -12,189 +12,268 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
 	</script>
 	<style>
-	     *{
-	         box-sizing: border-box;
-	         margin: 0;
-	         padding: 0;
-	     }
-	     html,body{
-	         font-size: 16px;
-	         width: 100%;
-	         height: 100%;
-	         
-	     }
-	     .container{
-	         height: 100%;
-	     }
-	     .row1{
-	         height: 10%;
-	         min-height: 60px;
-			 background-color: white;
-	        position: fixed;
-	        top: 0;
-			 z-index: 1;
-			 align-content: center;
-	        width: 100%;
-	        
-	     }
-	     .row2{
-	         height:90%;
-	         min-height:inherit;
-	         justify-content: center;
-	         align-content: center;
-			 margin-top: 60px;
-	       
-	     }
-	     .icons{
-	         width: 100%;
-	         height:30%;
-			 line-height: 30%;
-	         
-	         
-	     }
-	     .icons img{
-	         width: auto;
-	         
-	     }
-	     a:hover{
-	        text-decoration: none;
-	         
-	     }
-	    
-	     .icons a:nth-child(2){
-	         margin-left: 1rem;
-	         margin-right: 1rem;
-	     }
-	     .heading{
-	         margin-left: 0px!important;
-	         line-height: 2.2!important;
-	         color: #707070;
-	         font-size: 3.5rem;
-	       
-	     }
-	     .icon:hover{
-	         cursor: pointer;
-	       filter: brightness(0.5);
-	     }
-	     .list{
-	         list-style-type: none;
-	         color: #707070;
-	         font-size: 2rem;
-	     }
-	     .paragraph{
-	         color: #707070;
-	         font-size: 1.5rem;
-	     }
-	     #photo{
-	        max-height:300px;
-	         min-height: 50px;
-	         object-fit: scale-down;
-	         
-	     }
-		.skills{
-			height:80%;
-		}
+	        *{
+	            box-sizing: border-box;
+	            margin: 0;
+	            padding: 0;
+	        }
+	        html,body{
+	            font-size: 16px;
+	            width: 100%;
+	            height: 100%;
+	            
+	        }
+	        .container1{
+	            height: 100%;
+	        }
+		.container2{
+	            height: 60%;
+	        }
+	        .row1{
+	            height: 10%;
+	            min-height: 60px;
+	            background-color: white;
+	           position: fixed;
+	           top: 0;
+				left: 0;
+	            z-index: 1;
+	            align-content: center;
+	           width: 100%;
+margin-left: 0px;
+	           
+	        }
 		
-		.sub-heading{
-			text-align: center;
-			color: gray;
+		.bluecolor{
+			color: #2E72E0;
 		}
-		.img-container{
-			padding: 2rem;
+	        .row2{
+	            height:90%;
+	            min-height:inherit;
+	            justify-content: center;
+	            align-content: center;
+	            margin-top: 60px;
+	          
+	        }
+	        .icons{
+	            width: 100%;
+	            height:30%;
+	            line-height: 30%;
+	            padding-left: 2rem;
+	            
+	        }
+	        .icons img{
+	            width: auto;
+	            
+	        }
+	        a:hover{
+	           text-decoration: none;
+	            
+	        }
+	       
+	        .icons a:nth-child(2){
+	            margin-left: 1rem;
+	            margin-right: 1rem;
+	        }
+	        .heading{
+	            margin-left: 0px!important;
+	            line-height: 2.2!important;
+	            color: #707070;
+	            font-size: 3.5rem;
+	          
+	        }
+	        .icon:hover{
+	            cursor: pointer;
+	          filter: brightness(0.5);
+	        }
+	        .list{
+	            list-style-type: none;
+	            color: #707070;
+	            font-size: 2rem;
+	        }
+	        .paragraph{
+	            color: #707070;
+	            font-size: 1.5rem;
+	        }
+	        #photo{
+	           max-height:300px;
+	            min-height: 50px;
+	            object-fit: scale-down;
+	            
+	        }
+	       .smallicons{
+	       transform: scale(0.7);
+	       transform-origin: top left;
+			transition: transform 0.5s;
+
+	       }
+	       .skills{
+	           height:100%;
+	       }
+	       
+	       .sub-heading{
+	           text-align:  center;
+	           color: gray;
+			   width: 100%;
+		font: 20px "Lato", sans-serif;	
+		letter-spacing: 5px;
+			   text-transform: uppercase;
+		}
+		.colorwhite{
+			color: white;
+		}
+	       .img-container{
+	           padding: 2rem;
+	           display: grid;
+	           grid-template-columns:repeat(4,1fr);grid-column-gap: 2rem;
+	           grid-template-rows: 100px 100px;
+	           height: 90%;
+	justify-content: center;
+	       justify-items:center;
+	       }
+	       .img-container img{
+	           padding: 1.5rem;        }
+	       .grid-item5{
+	           grid-column-start: 2;
+	           grid-column-end: 3;
+	       }
+	       .grid-item6{
+	grid-column-start: 3;
+	           grid-column-end: 4; 
+	       }
+
+		.parallax_blur{
+			z-index: -1;
+			position: absolute;
+			filter: blur(2px);
+			 height: 70%;
+			width: 100%; background:url('img/mywork_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+			  background-attachment: fixed;			
+		}
+		.container3{
+			height: 70%;
+		}
+/*		//container3 n workcontaoner ko same height huna par6 coz display3 le height lai neglate gar6 container ko*/
+		.work-container{
+			height: 70%;
 			display: grid;
-			grid-template-columns:repeat(4,1fr);grid-column-gap: 2rem;
-			grid-template-rows: 100px 100px;
-			height: 90%;
-justify-content: center;
-		justify-items:center;
+			grid-template-columns: 1fr 1fr 1fr;
+			justify-content: center;
+			justify-items:center;
+			align-content: center;
+			align-items: center;
+			
 		}
-		.img-container img{
-			padding: 1.5rem;		}
-		.grid-item5{
-			grid-column-start: 2;
-			grid-column-end: 3;
+		.card{
+			background-color: white;
+			border: 1px solid white;
+			
+			
 		}
-		.grid-item6{
-grid-column-start: 3;
-			grid-column-end: 4;	
+		.work_griditem2{
+
 		}
-	@media only screen and (max-width: 992px) {
-	         html{
-	             font-size: 14px;
-	         }
-	         .heading{
-	             line-height: normal!important;
-	         }
+	   @media only screen and (max-width: 992px) {
+	            html{
+	                font-size: 14px;
+	            }
+	            .heading{
+	                line-height: normal!important;
+	            }
 
-	     }
-	@media only screen and (min-width: 768px) {
-	   .row1{
-	       padding-left: 2rem;
-	       align-items: flex-end;
-	   
-	   
-	   }
+	        }
+	   @media only screen and (min-width: 768px) {
+	      .row1{
+	          padding-left: 2rem;
+	          align-items: flex-end;
+	      
+	      width: 100%;
+	      }
 
-	     }
-	@media only screen and (max-height: 500px) {
-	   .row2{
-	       height: auto;
+	        }
+	   @media only screen and (max-height: 500px) {
+	      .row2{
+	          height: auto;
+			  width: 100%;
+	      
+	      }
 	   
-	   
-	   }
-	
-	   .row2{
-	       margin-top: 60px;
-	   }
-
-	     }
-	     
-	     @media(max-width: 768px) {
-	          html{
-	             font-size: 10px;
-	         }
-	         #photo{
-	             padding: 2rem;
-	         }
-	           .container{
-	           height: 100%;
-	           
-	           
-	   }
-			 .img-container{
-				 grid-template-rows: 50px 50px;
-			 }
-			  .img-container img{
-				  padding: 1rem;
-			 }
-	         .icons{
-	             height: 100%;
-	             padding: 2rem;
-	             line-height: 100%;
-	         }
-	         #first{
-	             order: 2;
-	         }
-	         #second{
-	             order: 1;
-	             padding: 0;
-	             margin: 0;
-	             
-	         }
-	     }
+	      .row2{
+	          margin-top: 60px;
+	      }
+	       .container1,.container2{
+	           height: auto;
+	       }
+		   .parallax_blur{
+			   height: auto;
+		   }
+		   .card{
+box-shadow: 0 0px 1px 0px black;
+		   }
+		   .container3{
+			   height: auto;
+		   }
+		   .colorwhite{
+			   color: #707070;
+		   }
+		}
+	        
+	        @media(max-width: 768px) {
+	             html{
+	                font-size: 10px;
+	            }
+	            #photo{
+	                padding: 2rem;
+	            }
+	       	   .work-container{
+grid-template-columns: 1fr;
+			   grid-template-rows: auto;
+			   padding: 2.5rem;
+	        }
+	            
+	/*           maintain margin for auto height container*/
+	         .container1,.container2{
+	              height: auto;
+	           margin-bottom: 3rem;
+	              width: 100%;
+	              
+	      }
+	            .img-container{
+	                grid-template-rows: 50px 50px;
+	            }
+	             .img-container img{
+	                 padding: 1rem;
+	            }
+	            .icons{
+	                height: 100%;
+	                padding: 2rem;
+	                line-height: 100%;
+	            }
+	            #first{
+	                order: 2;
+	            }
+	            #second{
+	                order: 1;
+	                padding: 0;
+	                margin: 0;
+	                
+	            }
+	        }
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row row1">
-			<div class="icons">
+	<div class="container container1">
+		<div class="row row1" id="header">
+			<div class="icons" id="icons">
 				<a href=""><img alt="user.svg" class="icon" height="100%" id="icon_user" src="assets/icons/user.svg" width="100%"></a> <a href="https://www.facebook.com/SrisTae"><img alt="facebook.svg" class="icon" data-placement="bottom" data-toggle="tooltip" height="100%" id="icon_facebook" src="assets/icons/facebook.svg" title="https://www.facebook.com/SrisTae" width="100%"></a> <a href="https://www.linkedin.com/in/shristy-shakya-286b00167"><img alt="github.svg" class="icon" data-placement="bottom" data-toggle="tooltip" height="100%" id="icon_github" src="assets/icons/github.svg" title="https://www.linkedin.com/in/shristy-shakya-286b00167" width="100%"></a>
 			</div>
 		</div>
 		<div class="row row2">
 			<div class="col-lg-7 col-md-7 col-sm-12 order-xs-2" id="first">
 				<h1 class="heading">Shristy Shakya</h1>
-				<p class="paragraph">Hello, my name is Shristy Shakya.I am a Front-end as well as an Android developer</p>
+				<p class="paragraph">Hello, my name is Shristy Shakya.I am a Front-end as well as an <b class="bluecolor">Android developer</b></p>
 				<ul class="list">
 					<li>Front-end</li>
 					<li>Android Developer</li>
@@ -205,30 +284,59 @@ grid-column-start: 3;
 			<div class="col-lg-5 col-md-5 col-sm-12 order-xs-1 align-self-center text-center" id="second"><img alt="image.svg" height="100%" id="photo" src="img/photo.png" width="100%"></div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container container2">
 		<div class="skills">
 			<h1 class="sub-heading">Skills</h1>
-			<div class="img-container">
-				<img src="assets/icons/java.svg" alt="java.svg"
-				height="100%" width="100%">
-				<img src="assets/icons/kotlin.svg" alt="kotlin.svg" height="100%" width="100%">
-				<img src="assets/icons/photoshop.svg" alt="" height="100%" width="100%">
-				<img src="assets/icons/illustrator.svg" alt=""
-				height="100%" width="100%">
-				<img src="assets/icons/xd.svg" alt=""
-				height="100%" 
-				class="grid-item5"
-				width="100%">
-				<img src="assets/icons/git.svg" alt="" height="100%" 
-				class="grid-item6"
-				width="100%">
+			<div class="img-container"><img alt="java.svg" height="100%" src="assets/icons/java.svg" width="100%"> <img alt="kotlin.svg" height="100%" src="assets/icons/kotlin.svg" width="100%"> <img alt="" height="100%" src="assets/icons/photoshop.svg" width="100%"> <img alt="" height="100%" src="assets/icons/illustrator.svg" width="100%"> <img alt="" class="grid-item5" height="100%" src="assets/icons/xd.svg" width="100%"> <img alt="" class="grid-item6" height="100%" src="assets/icons/git.svg" width="100%"></div>
+		</div>
+	</div>
+	<div class="container3 parallax w-100">
+	<div class="parallax_blur">
+	</div>
+		<div class="h-100 w-100">
+			<h1 class="sub-heading colorwhite py-5">my works</h1>
+			<div class="work-container w-100">
+				<div class="work_griditem1 h-100 w-100">
+					
+				</div>
+				<div class="work_griditem2 h-100 w-100">
+					<div class="card p-5 text-center">
+					<img src="img/petromap.png" height="50rem" width="50rem" alt="petromap.jpg" class="align-self-center m-3">
+                    <h5>Petro Map</h5>
+                    <p class="small">
+                    	The Nepal Oil Corporation (NOC) has embarked upon the quest to strengthen consumer rights by monitoring the quality and ..
+                    </p>
+										</div>
+				</div>
+				<div class="work_griditem3 h-100 w-100">
+					
+					
+				</div>
 			</div>
 		</div>
 	</div>
 	<script>
-	   $(function () {
-	 $('[data-toggle="tooltip"]').tooltip()
-	})
+	      $(function () {
+	    $('[data-toggle="tooltip"]').tooltip()
+	   })
+	</script> 
+	<script>
+	// When the user scrolls down 50px from the top of the document, resize the header's font size
+	$(document).ready(function(){
+	       
+	$(window).scroll(function(){
+
+	      if ($(document).scrollTop() > 50) {
+	  $(".icons").addClass("smallicons");
+	  console.log("added smallicons class");
+	    }else{
+	    $(".icons").removeClass("smallicons");
+	           console.log("removed smallicons class");
+
+	}
+	});
+	});
+
 	</script>
 </body>
 </html>
